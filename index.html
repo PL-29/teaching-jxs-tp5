@@ -18,18 +18,20 @@
 		
 		<div ng-controller="controller1">
 		
-			ID<input ng-model="id" type="text"/>
+			
 			</br>
 			NAME<input ng-model="name" type="text"/>
 			</br>
 			
 			POKEMONS
 			<select>
-				<option ng-repeat="pokemon in pokemons | filter:id | filter:name" ng-value="pokemon.id" >{{pokemon.name}}</option>
+				<option ng-repeat="pokemon in pokemons | filter:name">{{pokemon}}</option>
 			</select>
 			
 			</br>
 			<button ng-click="ecrireLogs()" >GO!</button>
+			
+			<p>{{pokemons}}</p>
 		</div>
 
 		<!-- Pokémon information -->
