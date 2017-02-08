@@ -11,9 +11,26 @@
 
 	<div class="container">
 		<h1>Pokésir</h1>
-
+		<div>
+			TEST<input ng-model="test" type="text"/>{{test}}
+		</div>
 		<!-- Search -->
-		<div></div>
+		
+		<div ng-controller="controller1">
+		
+			ID<input ng-model="id" type="text"/>
+			</br>
+			NAME<input ng-model="name" type="text"/>
+			</br>
+			
+			POKEMONS
+			<select>
+				<option ng-repeat="pokemon in pokemons | filter:id | filter:name" ng-value="pokemon.id" >{{pokemon.name}}</option>
+			</select>
+			
+			</br>
+			<button ng-click="ecrireLogs()" >GO!</button>
+		</div>
 
 		<!-- Pokémon information -->
 		<div></div>
